@@ -1,0 +1,83 @@
+<div class="banner">
+	<div class="container">
+		<div class="pershkrimi col-sm-12 col-md-5">
+			<h2>Qyteti i Prishtinës portali i granteve </h2>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+			</p>
+			<p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+		</div>
+		<div class="abonohu col-xs-12 col-md-3 pull-right">
+			<form>
+				<input type="email" class="col-xs-12" placeholder="E-maili juaj"/>
+				<p>Regjistrohu per subvencione</p>
+				<button class="col-xs-12">Vazhdo</button>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="tabela">
+		<h3>Grante dhe Subvencione</h3>
+		<div class="table-responsive"> 
+			<table class="table table-condensed grantet">
+				<thead>
+					<tr>
+						<th class="par">Drejtoria</th>
+						<th>Lloji i grantit</th>
+						<th class="par">Koha e aplikimit</th>
+						<th>Kriteret</th>
+						<th class="par">Apliko ketu <i class="fa fa-level-down fa-fw apliko"></i></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="granti in vm.grantsList">
+						<td>{{granti.drejtoria}}</td>
+						<td>{{granti.lloji}}</td>
+						<td>{{granti.prej + ' - ' + granti.deri}}</td>
+						<td><a href="{{'uploads' + granti.file.destination + '/' + granti.file.fileName}}"><i class="fa fa-file-pdf-o fa-fw apliko"></i> Shkarko</a></td>
+						<td class="link"><a ui-sref="client.aplikacioni({aplikacionId: granti._id})">Apliko</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="butonat pull-right">
+		<div class="fituesit btn">
+			<a href ui-sref="client.perfituesit"><p>Fituesit e granteve</p></a>
+		</div>
+		<div class="meteper btn">
+			<a href="grantet.html"><p>Më tepër grante</p></a>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="tabi">
+		<h3>Grante dhe Subvencione</h3>
+		<ul class="nav nav-tabs nav-justified">
+			<li class="active"><a data-toggle="tab" href="#sectionA">Çfarë përfitoni?</a></li>
+			<li><a data-toggle="tab" href="#sectionB">Kush mund të aplikoj?</a></li>
+			<li><a data-toggle="tab" href="#sectionC">Si mund të aplikoni?</a></li>
+			<li><a data-toggle="tab" href="#sectionD">Cila është koha më e përshtatshme?</a></li>
+		</ul>
+		<div class="tab-content">
+			<div id="sectionA" class="tab-pane fade in active">
+				<h3>Çfarë përfitoni?</h3>
+				<p>Çfarë përfitoni?</p>
+			</div>
+			<div id="sectionB" class="tab-pane fade">
+				<h3>Kush mund të aplikoj?</h3>
+				<p>Kush mund të aplikoj?</p>
+			</div>
+			<div id="sectionC" class="tab-pane fade">
+				<h3>Si mund të aplikoni?</h3>
+				<p>Si mund të aplikoni?</p>
+			</div>
+			<div id="sectionD" class="tab-pane fade">
+				<h3>Cila është koha më e përshtatshme?</h3>
+				<p>Cila është koha më e përshtatshme?</p>
+			</div>
+		</div>
+	</div>
+</div>

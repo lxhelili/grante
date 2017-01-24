@@ -1,0 +1,103 @@
+<section class="advanced-elements">
+  <div class="mdl-color--blue ml-header relative clear">
+    <div class="p-20">
+      <h3 class="mdl-color-text--white m-t-20 m-b-5">Shto Grant/Subvencion të ri</h3>
+      <h4 class="mdl-color-text--blue-100 m-b-20 no-m-t w100">Plotëso fushat në vijim për të shtuar një grant të ri.</h4>
+    </div>
+  </div>
+
+  <div class="mdl-grid mdl-grid--no-spacing">
+    <div class="mdl-cell mdl-cell--3-col mdl-cell--12-col-tablet mdl-cell--12-col-phone mdl-color--grey-100">
+      <div class="p-40 p-r-20 p-20--small">
+        <div class=" mdl-color-text--blue-grey-400">
+          <h3><i class="material-icons f-left m-r-5">format_align_left</i> Ndihmë</h3>
+          <p>Për cdo paqartesi ne lidhje me ate se si duhet krijuar nje grant te ri hap linkun e me poshtem!</p>
+          <div class="m-t-30">
+            <ul class="list-bordered">
+              <li>
+                <a target="_blank" href="https://github.com/angular-ui/ui-select">
+                  <i class="material-icons m-r-5 f11">description</i>
+                  Kliko ketu per ndihme
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mdl-cell mdl-cell--9-col mdl-cell--12-col-tablet mdl-cell--12-col-phone no-p-l">
+      <div class="p-20 ml-card-holder ml-card-holder-first">
+        <div class="mdl-card mdl-shadow--1dp">
+          <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Grant i ri</h2>
+          </div>
+          <div class="p-30 p-20--small" ng-controller="SelectController">
+
+            <form>
+              <div>
+                <p>Drejtoritë</p>
+                <ui-select ng-model="vm.grante.drejtoria" theme="select2" ng-disabled="disabled" title="Zgjedh drejtorin" search-enabled="false">
+                  <ui-select-match placeholder="Zgjedh drejtorinë">{{$select.selected.emri}}</ui-select-match>
+                  <ui-select-choices repeat="drejtoria in drejtorit | filter: $select.search">
+                    <div ng-bind-html="drejtoria.emri | highlight: $select.search"></div>
+                  </ui-select-choices>
+                </ui-select>
+              </div>
+
+              <div class="m-t-30">
+                <p>Grantet/Subvencionet</p>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                  <textarea class="mdl-textfield__input" type="text" ng-model="vm.grante.lloji" rows="2" id="sample5" ></textarea>
+                  <label class="mdl-textfield__label" for="sample5">Lloji i Grantit</label>
+                </div>
+              </div>
+             <div class="m-t-20">
+                <p>Koha e aplikimit</p>
+                 <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input"
+                         type="text"
+                         id="datepicker1"
+                         pikaday="datepicker1"
+                         format="DD-MM-YYYY"
+                         on-select="onPikadaySelect(pikaday, date)"
+                         theme="material-lite"
+                         ng-model="vm.grante.prej" />
+                  <label class="mdl-textfield__label" for="datepicker1">Prej</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input"
+                         type="text"
+                         id="datepicker2"
+                         pikaday="datepicker2"
+                         format="DD-MM-YYYY"
+                         on-select="onPikadaySelect(pikaday, date)"
+                         theme="material-lite"
+                         ng-model="vm.grante.deri" />
+                  <label class="mdl-textfield__label" for="datepicker2">Deri</label>
+                </div>
+                <div class="m-t-20">
+                  <button ng-multiple="true" ngf-select ng-model="vm.grante.kriteret" class="mdl-button mdl-js-button mdl-button--raised">
+                    Ngarko kriteret
+                  </button> 
+                </div>
+                <div class="m-t-30">
+                  <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+                    Ruaj
+                  </button>
+                </div>
+                {{vm.grante | json}}
+             </div> 
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</section>

@@ -1,0 +1,531 @@
+<div class="form-zone">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab1" data-toggle="tab">Të dhënat personale <i class="fa"></i></a></li>
+                <li><a href="#tab2" data-toggle="tab">Të dhënat për organizatën <i class="fa"></i></a></li>
+            </ul>
+            {{vm.aplikacioni}}
+            <form id="accountForm" ng-submit="vm.newAplikacion(vm.aplikacioni)">
+              <div class="tab-content">
+                  <div class="tab-pane row active" id="tab1">
+                      <div class="col-lg-12">
+                        <p class="title well">Të dhënat personale ( për aplikim individual )</p>
+                      </div>
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="emriMbiemri">Emri dhe mbiemri:</label>
+                            <input type="text" class="form-control" ng-model="vm.aplikacioni.emriMbiemri" id="emriMbiemri" />
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="dataLindjes">Data e lindjes:</label>
+                            <input type="text" class="form-control" ng-model="vm.aplikacioni.dataLindjes" id="dataLindjes"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="gjinia">Gjinia:</label>
+                            <div class="inline-el">
+                              <label class="radio-inline"><input type="radio" ng-model="vm.aplikacioni.gjinia" value="Femër">Femër</label>
+                              <label class="radio-inline"><input type="radio" ng-model="vm.aplikacioni.gjinia" value="Mashkull">Mashkull</label>
+                            </div>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="profesioni">Profesioni:</label>
+                            <input type="text" class="form-control" name="profesioni" id="profesioni"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="vendiBanimit">Vendi i banimit:</label>
+                            <input type="text" class="form-control" name="vendiBanimit" id="vendiBanimit"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="kodiPostar">Kodi postar:</label>
+                            <input type="text" class="form-control" name="kodiPostar" id="kodiPostar"/>
+                         </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="komuna">Komuna:</label>
+                            <input type="text" class="form-control" name="komuna" id="komuna"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="shtetesia">Shtetësia:</label>
+                            <input type="text" class="form-control" name="shtetesia" id="shtetesia"/>
+                         </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="perkatesia">Përkatësia etnike:</label>
+                            <input type="text" class="form-control" name="perkatesia" id="perkatesia"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="numriIndentifikimit">Nr. i dok. të identifikimit:</label>
+                            <input type="text" class="form-control" name="numriIdentifikimit" id="numriIndentifikimit"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="emaili">Posta elektronike/ E-mail:</label>
+                            <input type="text" class="form-control" name="emaili" id="emaili"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="telefoni">Telefoni:</label>
+                            <input type="text" class="form-control" name="telefoni" id="telefoni"/>
+                         </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="niveliArsimimit">Niveli i arsimimit:</label>
+                            <input type="text" class="form-control" name="niveliArsimimit" id="niveliArsimimit"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="pyetje">A keni aplikuar paraprakisht për subvencione në DKRS?:</label>
+                            <div class="inline-el">
+                              <label class="radio-inline"><input type="radio" value="" name="radio2">Po</label>
+                              <label class="radio-inline"><input type="radio" value="" name="radio2">Jo</label>
+                            </div>
+                         </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="numriKontratesDKRS">Shënoni numrin e kontratës së fundit me DKRS:</label>
+                            <input type="text" class="form-control" name="numriKontratesDKRS" id="numriKontratesDKRS"/>
+                         </div>
+                      </div>
+
+                  </div>
+
+                  <div class="tab-pane row" id="tab2">
+                      <div class="col-lg-12">
+                        <p class="title well">Të dhënat për organizatën kulturore, rinore, klubin sportiv apo bisnesin</p>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="emriOJQ">Emri i OJQ-së, Klubit sportiv apo biznesit:</label>
+                            <input type="text" class="form-control" name="emriOJQ" id="emriOJQ"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="numriRegjistrimit">Numri i regjistrimit:</label>
+                            <input type="text" class="form-control" name="numriRegjistrimit" id="numriRegjistrimit"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="numriFiskal">Numri fiskal:</label>
+                            <input type="text" class="form-control" name="numriFiskal" id="numriFiskal"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="uebFaqja">Ueb faqja:</label>
+                            <input type="text" class="form-control" name="uebFaqja" id="uebFaqja"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="postaElektronike">Posta elektronike/ E-mail:</label>
+                            <input type="text" class="form-control" name="postaElektronike" id="postaElektronike"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="adresa">Adresa:</label>
+                            <input type="text" class="form-control" name="adresa" id="adresa"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="lokacioni">Lokacioni (qyteti/fshati):</label>
+                            <input type="text" class="form-control" name="lokacioni" id="lokacioni"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="kodiPostar">Kodi postar:</label>
+                            <input type="text" class="form-control" name="kodiPostar" id="kodiPostar"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="numriKontaktit">Numri i kontaktit:</label>
+                            <input type="text" class="form-control" name="numriKontaktit" id="numriKontaktit"/>
+                         </div>
+                      </div>
+
+                      <div class="col-lg-12">
+                         <div class="form-group">
+                            <label for="aktivitetetThemelore">Aktivitetet themelore (ndarja të bëhet me presje!):</label>
+                            <textarea class="form-control" name="aktivitetetThemelore" id="aktivitetetThemelore" cols="30" rows="4"></textarea>
+                         </div>
+                      </div>
+                        
+                      <div class="col-lg-4">
+                         <div class="row">
+                            <div class="col-lg-8">
+                              <div class="form-group">
+                                <label for="numriPuntorve">Numri aktual i të punësuarve:</label>
+                                <input type="text" class="form-control" name="numriPuntorve" id="numriPuntorve"/>
+                              </div>
+                           </div>
+                           <div class="col-lg-2">
+                              <div class="form-group">
+                                <label for="femra">Femra</label>
+                                <input type="text" class="form-control" name="femra" id="femra"/>
+                              </div>
+                            </div>
+                            <div class="col-lg-2">
+                              <div class="form-group">
+                                <label for="meshkuj">Meshkuj</label>
+                                <input type="text" class="form-control" name="meshkuj" id="meshkuj"/>
+                              </div>
+                            </div>
+                         </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="pyetje1">A keni aplikuar paraprakisht për subvencione në DKRS?:</label>
+                            <div class="inline-el">
+                              <label class="radio-inline"><input type="radio" value="" name="radio2">Po</label>
+                              <label class="radio-inline"><input type="radio" value="" name="radio2">Jo</label>
+                            </div>
+                         </div>
+                      </div>
+                      
+                      <div class="col-lg-4">
+                         <div class="form-group">
+                            <label for="numriKontratesDKRS1">Shënoni numrin e kontratës së fundit me DKRS:</label>
+                            <input type="text" class="form-control" name="numriKontratesDKRS1" id="numriKontratesDKRS1"/>
+                         </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="row">
+              
+                <div class="col-lg-12">
+                  <p class="title well">Informata mbi projektin</p>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label for="titulliProjektit">Emri i projektit/Titulli:</label>
+                    <input type="text" class="form-control" name="titulliProjektit" id="titulliProjektit"/>
+                 </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                      <label for="zonat">Projekti do të realizohet në zonat:</label>
+                      <div class="inline-el">
+                        <label class="radio-inline"><input type="radio" value="" name="zonat">Urbane</label>
+                        <label class="radio-inline"><input type="radio" value="" name="zonat">Rurale</label>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                      <label for="sektori">Sektori:</label>
+                      <div class="inline-el">
+                        <label class="radio-inline"><input type="radio" value="" name="sektori">Kulturë</label>
+                        <label class="radio-inline"><input type="radio" value="" name="sektori">Rini dhe Sport</label>
+                      </div>
+                  </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                      <label for="projekti">Projekti është:</label>
+                      <div class="inline-el">
+                        <label class="radio-inline"><input type="radio" value="" name="projekti">i ri </label>
+                        <label class="radio-inline"><input type="radio" value="" name="projekti">vazhdimësi e projektit</label>
+                      </div>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="veprimtarit">Shëno veprimtaritë dhe aktivitet me të cilat do të merret projekti:</label>
+                  </div>
+                </div>
+                <div class="col-lg-5">
+                  <select name="from[]" id="search" class="form-control" size="8" multiple="multiple">
+                    <option value="1">Arkitekturë</option>
+                    <option value="2">Art Vizual</option>
+                    <option value="3">Artizanale</option>
+                    <option value="4">Botim</option>
+                    <option value="5">Çështje gjinore</option>
+                    <option value="6">Debat</option>
+                    <option value="7">Ekologji</option>
+                    <option value="8">Fëmijë</option>
+                    <option value="9">Festival</option>
+                    <option value="10">Fushata vetëdijsimit</option>
+                    <option value="11">Grup rinor</option>
+                    <option value="12">Hulumtim</option>
+                    <option value="13">Kinematografi</option>
+                    <option value="14">Klub sportiv</option>
+                    <option value="15">Kotizim</option>
+                    <option value="16">Ligjërate</option>
+                    <option value="17">Mbështjetje të personave me nevoja të veçanta</option>
+                    <option value="18">Muzikë</option>
+                    <option value="19">Panair</option>
+                    <option value="20">Përfaqësim në ngjarje kulturore</option>
+                    <option value="21">Përfaqësim në gara</option>
+                    <option value="22">Promovim dhe marrëdhënie me publikun</option>
+                    <option value="23">Shoqata grave</option>
+                    <option value="24">Shoqatë kulturo-artistike</option>
+                    <option value="25">Takime letrare</option>
+                    <option value="26">Teatër</option>
+                    <option value="27">Teknologji informative</option>
+                    <option value="28">Trajnime</option>
+                    <option value="30">Trashëgimi kulturore</option>
+                    <option value="31">Turizëm</option>
+                    <option value="32">Tryezë</option>
+                    <option value="33">Udhëtim</option>
+                    <option value="33">Vullnetarizmi</option>
+                  </select>
+
+                  <div class="form-group mt10">
+                    <label for="tjeter">Tjetër</label>
+                    <input type="text" class="form-control inputi">
+                    <button type="button" class="btn btn-primary" onclick="myFunction()">Shto</button>
+                  </div>
+
+                </div>
+                
+                <div class="col-lg-2">
+                  <button type="button" id="search_rightAll" class="btn btn-block"><i class="fa fa-angle-double-right"></i></button>
+                  <button type="button" id="search_rightSelected" class="btn btn-block"><i class="fa fa-angle-right"></i></button>
+                  <button type="button" id="search_leftSelected" class="btn btn-block"><i class="fa fa-angle-left"></i></button>
+                  <button type="button" id="search_leftAll" class="btn btn-block"><i class="fa fa-angle-double-left"></i></button>
+                </div>
+                
+                <div class="col-lg-5">
+                  <select name="to[]" id="search_to" class="form-control" size="8" multiple="multiple"></select>
+                </div>
+                <div class="clearfix"></div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <label class="label-height" for="qellimi">Qëllimi i projektit <small>- Përshkruani qëllimin e projektit, përkatizi me nevojat dhe kërkesat e qytetarëve të Komunës së Prishtinës në zonën urbane ose/dhe rurale.</small></label>
+                  <div class="form-group">
+                    <textarea name="qellimi" id="qellimi" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="produktet">Produktet e projektit <small>- Përshkruani shërbimet dhe produktet të cilat do t'i ofroni(nëse aplikohet): </small></label>
+                  <div class="form-group">
+                    <textarea name="produktet" id="produktet" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="aktivitetet">Aktivitet konkrete të projektit <small>- Përshkruani aktivitetet dhe si do të organizohen ato.</small></label>
+                  <div class="form-group">
+                    <textarea name="aktivitetet" id="aktivitetet" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="aktivitetet">Përituesit e projektit <small>- Tregoni kush janë përfituesit direkt dhe indirekt të projektit.</small></label>
+                  <div class="form-group">
+                    <textarea name="aktivitetet" id="aktivitetet" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="periudha">Periudha e realizimit të projektit <small>- data e fillimit (d/m/v) dhe data e përfundimit (d/m/v)</small></label>
+                  <div class="form-group">
+                    <textarea name="periudha" id="periudha" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="informatatKonkrete">Shënoni informata konkrete rreth projektit <small>- Datat e mbajtjes së aktiviteteve, lokacionet ku do të mbahen aktivitete, koha e fillimit dhe mbarimit të aktivieteve, etj.</small></label>
+                  <div class="form-group">
+                    <textarea name="informatatKonkrete" id="informatatKonkrete" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="rezultatet">Rezultatet e pritura <small>- Përshkruani rezultatet e pritura gjatë dhe pas përfundimit të projektit. Tregoni nëse projekti ka gjasë të përsëritet apo edhe vazhdoj në etapa tjera të zhvillimit.</small></label>
+                  <div class="form-group">
+                    <textarea name="rezultatet" id="rezultatet" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="promovimi">Mënyra e promovimit <small>- Tregoni se në cfarë forme do të promovohet projekti.</small></label>
+                  <div class="form-group">
+                    <textarea name="promovimi" id="promovimi" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <label class="label-height" for="partner">Partner të projektit <small>- (shemb. Individ, OJQ-të kulturore, rinore, klube sportive, federata, biznese private).</small></label>
+                  <div class="form-group">
+                    <textarea name="partner" id="partner" rows="4" class="form-control"></textarea>
+                    <small>Vërejtje * kjo fushë mund të përmaj maksimum 200 karaktere</small>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <p class="title well">Plani financiar</p>
+                </div>
+                <div class="col-lg-12">
+                  <div class="bs-callout">
+                    <a href=""><i class="fa fa-download"></i> Shkarko dokumentin</a>
+                    <small>Në dokumentin e shkarkuar duhet t'i plotësoni të dhënat nga plani financiar, dhe po i njejti më pas të ngarkohen në formën e më poshtme.</small>
+                </div>
+                </div>
+                <div class="col-lg-12">
+                  <label for="">Buxheti i përgjithshëm dhe fondet e siguruara nga burimet tjera</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="buxhetiPergjithshem"></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12">
+                  <p class="title well">Informata mbi bankën</p>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label for="emriBankes">Emri i bankës:</label>
+                    <input type="text" class="form-control" name="emriBankes" id="emriBankes"/>
+                 </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label for="emriDeges">Emri/lokacioni degës:</label>
+                    <input type="text" class="form-control" name="emriDeges" id="emriDeges"/>
+                 </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label for="numriLlogaris">Numri i llogarisë:</label>
+                    <input type="text" class="form-control" name="numriLlogaris" id="numriLlogaris"/>
+                 </div>
+                </div>
+                <div class="col-lg-3">
+                  <div class="form-group">
+                    <label for="mbajtsiLlogaris">Emri i mbajtësit të llogarisë:</label>
+                    <input type="text" class="form-control" name="mbajtsiLlogaris" id="mbajtsiLlogaris"/>
+                 </div>
+                </div>
+                <div class="col-lg-12">
+                  <p class="title well">Shtojcat <small>Projektit t'i bashkëngjitni dokumentet përkatëse të obliguara si në vijim, dhe dokumentet shtesë për plotësim të projektit, sipas nevojës. </small></p>
+                </div>
+
+                <div class="col-lg-12">
+                  <label for="">Buxheti i detajuar i projektit</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="buxhetiDetajuar"></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <label for="">Kopja e letërnjftimit apo pasaportës e individit pse e personit të autorizuar në OJQ, klub apo biznes</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <label for="">Kopja e vërtetimit për llogarin bankare e individit ose atë të OJQ-së, klubit ose biznesit</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <label for="">Kopja e çertifikatës së regjistrimit për OJQ-të, klubet apo bizneset</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <label for="">Kopja e çertifikatës së numrit fiskal për OJQ-të, klubet apo bizneset</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <label for="">Dëshmin për fondet e siguruara</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <label for="">Të tjera:</label>
+                  <div class="fileinput fileinput-new input-group" data-provides="fileinput">
+                    <div class="form-control" data-trigger="fileinput"><i class="fa fa-file fileinput-exists"></i> <span class="fileinput-filename"></span></div>
+                    <span class="input-group-addon btn btn-default btn-file"><span class="fileinput-new">Ngarko</span><span class="fileinput-exists">Ndrysho</span><input type="file" name="..."></span>
+                    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Fshij</a>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <button type="submit" class="btn btn-primary">Dërgo</button>
+                </div>
+              </div>
+              <!-- <div class="form-group" style="margin-top: 15px;">
+                  <div class="col-xs-5 col-xs-offset-3">
+                      <button type="submit" class="btn btn-default">Validate</button>
+                  </div>
+              </div> -->
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
